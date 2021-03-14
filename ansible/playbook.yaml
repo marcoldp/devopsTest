@@ -1,0 +1,9 @@
+---
+- hosts: all
+# Test ansible installation version
+ # vars: 
+  #  user: marcoldp
+  tasks: 
+    - name: Check OS
+      debug: 
+        msg: "Current OS is {{ ansible_distribution }} {{ ansible_distribution_version}}"
