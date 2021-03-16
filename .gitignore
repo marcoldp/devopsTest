@@ -1,0 +1,5 @@
+# to avoid pushing elements unecessary elements related to terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.backup
+*.tfstate.lock.info

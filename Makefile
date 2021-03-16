@@ -1,6 +1,11 @@
-packer-validate:
-	cd packer; packer validate wordpress.pkr.hcl
+.PHONY: terraform packer clean_resources
+terraform:	
+	cd terraform; terraform init 
+	cd terraform; terraform apply -auto-approve
 
-packer-build:
-		cd packer; packer build wordpress.pkr.hcl
-		#-var 'weekday=Sunday' 
+packer:
+	cd packer; packer validate wordpress.pkr.hcl; 
+	cd packer; packer build wordpress.pkr.hcl 
+
+clean_resources:
+	cd terraform; terraform destroy -auto-approve

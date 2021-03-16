@@ -1,8 +1,6 @@
 ---
-- hosts: all
-# Test ansible installation version
- # vars: 
-  #  user: marcoldp
+- hosts: localhost
+
   tasks: 
     - name: Check OS
       debug: 
