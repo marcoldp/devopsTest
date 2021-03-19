@@ -1,0 +1,41 @@
+[
+    {
+        "name": "wordpress_marcoldp",
+        "image": "${repository_url}:${image_tag}",
+        "cpu": 1024,
+        "memory": 1024,
+        "command": [
+            "apache2-foreground"
+        ],
+        "portMappings": [
+            {
+                "containerPort": 80,
+                "hostPort": 80
+            }
+        ],
+        "mountPoints": [
+            {
+                "ContainerPath": "/var/www/html/",
+                "SourceVolume": "volume"
+            }
+        ],
+        "environment": [
+            {
+                "name": "WORDPRESS_DB_HOST",
+                "value": "${db_host}"
+            },
+            {
+                "name": "WORDPRESS_DB_USER",
+                "value": "${db_user}"
+            },
+            {
+                "name": "WORDPRESS_DB_PASSWORD",
+                "value": "${db_pwd}"
+            },
+            {
+                "name": "WORDPRESS_DB_NAME",
+                "value": "${db_name}"
+            }
+        ]
+    }
+]
