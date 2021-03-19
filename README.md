@@ -17,6 +17,7 @@
     5. Define the RDS database
     6. Define the ecs cluster, service and task definition to run the wordpress image as specified
 
+
 ## Architecture implemented:
 ![plot](architecture.png)
 
@@ -73,5 +74,5 @@ And finally Create Pipeline to have different cluster environments (prod,test,..
 
 **18 March** - It was quite hard to learn about all the different AWS resources as I went and implement at the same time an archicture.Also because i was trying to keep the archicture minimalist I had a bug in the RDS because it required 2 subnets with 2 AV and that's why I had a "quick-non-production-ready" fix to create another subnet just to be able to test the rest of the implementation. 
 
-**19 March**
- Finally faced some problems with how to connect to the instance
+**19 March** - Finally faced some problems with how to connect to the instance
+
